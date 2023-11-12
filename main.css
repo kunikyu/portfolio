@@ -54,9 +54,14 @@ tr{
 .work_content{
     display: flex;
     justify-content: center;
+    margin-bottom: 20px;
+    align-items: flex-start; 
 }
 .work_text{
     margin: 0 20px;
     width: 40%;
     text-align: left;
+}
+img{
+    margin-top: 10px;
 }
