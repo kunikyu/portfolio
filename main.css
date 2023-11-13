@@ -46,6 +46,12 @@ ul{
 .list_items{
     padding: 10px 30px;
 }
+.list_items a{
+    text-decoration: none;
+}
+a:link,a:visited{
+    color: black;
+}
 section{
     margin: 0 auto;
 }
@@ -117,4 +123,14 @@ img{
 main{
     width: 70%;
     margin: 0 auto;
+}
+footer{
+    bottom: 0;
+    background-color: black;
+}
+#copyright{
+    margin: 0;
+    font-size: 12px;
+    color: lightgray;
+    text-align: center;
 }
