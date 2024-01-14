@@ -16,23 +16,6 @@ header{
     justify-content: center;
     align-items: center;/* 縦位置の調整 */
 }
-header h1{
-    margin: 10px 0;
-    padding: 0 30px;
-}
-#cover{
-    margin-top: 68px;
-    display: flex;
-    justify-content: center;
-    align-items: baseline;
-    background-image: url(pictures/yama.png);
-    height: calc(100vh - 68px);
-    background-size: cover;
-    background-position: center;
-}
-#cover h1{
-    margin-top: 10%;
-}
 ul{
     list-style: none;
     padding: 0;
@@ -51,6 +34,19 @@ ul{
 }
 a:link,a:visited{
     color: black;
+}
+#cover{
+    margin-top: 68px;
+    display: flex;
+    justify-content: center;
+    align-items: baseline;
+    background-image: url(pictures/yama.png);
+    height: calc(100vh - 68px);
+    background-size: cover;
+    background-position: center;
+}
+#cover h1{
+    margin-top: 10%;
 }
 section{
     margin: 0 auto;
@@ -102,6 +98,21 @@ tr{
     justify-content: center;
     margin-bottom: 20px;
     align-items: flex-start; 
+}
+.work_headline{
+    height: 40px;
+    display: flex;
+    vertical-align: middle;
+    /* justify-content: center; */
+}
+.work_headline h3{
+    /* height: 35px; */
+    margin: auto auto 0 0;
+}
+.work_headline p{
+    /* height: 35px; */
+    margin: auto 0 0 0;
+    vertical-align: bottom;
 }
 .work_text{
     margin: 0 8%;
@@ -214,7 +225,6 @@ footer{
         background: green;
     }
     
-    /* 見出しの文字と横棒の間隔を開ける */
     h2::before {
         margin-right: 2%;
     }
@@ -223,7 +233,6 @@ footer{
         margin-left: 2%;
     }
     
-    /*  */
     td{
         padding-left: 30px;
     }
@@ -245,21 +254,35 @@ footer{
         align-items: flex-start;
         margin: 0 auto  ;
     }
+    .work_headline{
+        display: contents;
+    }
     .work_content{
         display: flex;
         flex-flow: column;
-        justify-content: center;
-        align-content: center; 
         margin-bottom: 20px;
         align-items: flex-start; 
     }
     .work_content img{
-        margin:0 auto;
+        margin:5px auto;
+    }
+    .work_link{
+        width: 100%;
+        text-align: right;
+    }
+    .work_content p:not(.work_link){
+        margin: 0 auto;
+        text-align: center;
+    }
+    .work_content h3{
+        margin: 0 auto;
+        text-align: center;
     }
     .work_text{
-        width: 90%;
+        /* width: 90%;
         text-align: center;
-        margin: 0 auto;
+        margin: 0 auto; */
+        display: contents;
     }
     main{
         width: 100%;
@@ -267,12 +290,5 @@ footer{
     }
     footer{
         bottom: 0;
-    }
-    #copyright{
-        margin: 0;
-        font-size: 12px;
-        color: lightgray;
-        text-align: center;
-        background-color: black;
     }
 }
