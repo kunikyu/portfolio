@@ -21,7 +21,7 @@ p{
 b{
     color: red;
 }
-#footer{
+#sub_footer{
     border-top: 1px solid #000;
     display: flex;
 }
