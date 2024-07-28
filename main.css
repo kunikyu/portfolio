@@ -1,7 +1,7 @@
 body { 
     margin: 0px;
     -webkit-text-size-adjust: 100%;
-    background-color: silver;
+    background-color: #f0f0f0;
 }
 header{
     position: fixed;
@@ -12,7 +12,7 @@ header{
     z-index: 100;
     margin: 0 auto;
     display: flex;
-    background-color: cyan;
+    background-color: whitesmoke;
     justify-content: center;
     align-items: center;/* 縦位置の調整 */
 }
@@ -150,14 +150,14 @@ footer{
         /* display: none; */
         margin: 0px;
         -webkit-text-size-adjust: 100%;
-        background-color: #dedede;
+        background-color: #f0f0f0;
     }
     header{
         position: fixed;
         z-index: 100;
         margin: 0 auto;
         display: flex;
-        background-color: peru;
+        background-color: whitesmoke;
         justify-content: center;
         align-items: center;/* 縦位置の調整 */
     }
