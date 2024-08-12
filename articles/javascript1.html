@@ -1,9 +1,262 @@
 <!DOCTYPE html>
-<html>
-  <head>
-    <title>javascriptの記事</title>
-  </head>
-  <body>
-    <h1>製作中</h1>
+<html lang="ja">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>JavaScriptの基本</title>
+    <link rel="stylesheet" href="articles.css">
+</head>
+<body>
+  <div class="head">
+    <img src="../pictures/icon_javascript.png" alt="" id="javascript">
+    <h1>JavaScriptの基本</h1>
+  </div>
+    <p>JavaScriptは、ウェブ開発において非常に重要なプログラミング言語です。Webブラウザ上で動作し、動的なウェブページやインタラクティブなコンテンツを作成するために使用されます。ここでは、JavaScriptの基本について説明します。</p>
+    <div class="index">
+      <p><strong>目次</strong></p>
+      <ol>
+        <li><a href="#1">JavaScriptの基本構文</a></li>
+        <li><a href="#2">関数</a></li>
+        <li><a href="#3">制御構文</a></li>
+        <li><a href="#4">オブジェクトと配列</a></li>
+      </ol>
+    </div>
+    <h2 id="1">1. JavaScriptの基本構文</h2>
+    <h3>変数の宣言</h3>
+    <p>JavaScriptでは、<code class="inline">var</code>、<code class="inline">let</code>、<code class="inline">const</code>を使って変数を宣言します。この3つの違いは主に3つです。それは再宣言と再代入、スコープの違いです。再宣言はその名の通りもう一度同じ変数名で変数を宣言することで、これは<code class="inline">var</code>のみ可能です。再代入は変数に格納されている値を変更することです。これは<code class="inline">var</code>と<code class="inline">let</code>で使用できます。一方<code class="inline">const</code>はそのどちらもできません。</p>
+    <pre><code>var name = "Alice";
+let age = 25;
+const isStudent = true;
+</code></pre>
+
+    <h3>データ型</h3>
+    <p>JavaScriptには、以下のような基本的なデータ型があります。</p>
+    <ul>
+        <li>文字列（String）: <code class="inline">"Hello"</code></li>
+        <li>数値（Number）: <code class="inline">42</code></li>
+        <li>ブール値（Boolean）: <code class="inline">true</code> または <code class="inline">false</code></li>
+        <li>オブジェクト（Object）: <code class="inline">{ name: "Alice", age: 25 }</code></li>
+        <li>配列（Array）: <code class="inline">[1, 2, 3, 4, 5]</code></li>
+    </ul>
+
+    <h3>演算子</h3>
+    <p>基本的な演算子として、算術演算子、比較演算子、論理演算子などがあります。ここでは簡単でよく使われる算術演算子と比較演算子を紹介します。</p>
+    <h4>算術演算子</h4>
+    <p>代表的なものに次のようなものがあります。数学で使用される記述とほぼ同じように使用できますが、乗算や除算では×や÷の記号は使用しません。また、除算では結果が小数値になる場合があります。</p>
+    <table>
+      <thead>
+        <tr>
+          <th>演算子</th>
+          <th>概要</th>
+          <th>例</th>
+          <th>結果</th>
+        </tr>
+      </thead>
+      <tbody>
+      <tr>
+        <td><code class="inline">+</code></td>
+        <td>数値の加算</td>
+        <td><code class="inline">x = 3 + 5</code></td>
+        <td>x = 8</td>
+      </tr>
+      <tr>
+        <td><code class="inline">-</code></td>
+        <td>数値の減算</td>
+        <td><code class="inline">x = 10 - 7</code></td>
+        <td>x = 3</td>
+      </tr>
+      <tr>
+        <td><code class="inline">*</code></td>
+        <td>数値の乗算</td>
+        <td><code class="inline">x = 3 * 5</code></td>
+        <td>x = 15</td>
+      </tr>
+      <tr>
+        <td><code class="inline">**</code></td>
+        <td>数値のべき乗</td>
+        <td><code class="inline">x = 2 ** 3</code></td>
+        <td>x = 8</td>
+      </tr>
+      <tr>
+        <td><code class="inline">/</code></td>
+        <td>数値の徐算</td>
+        <td><code class="inline">x = 5 / 2</code></td>
+        <td>x = 2.5</td>
+      </tr>
+      <tr>
+        <td><code class="inline">%</code></td>
+        <td>数値の剰余</td>
+        <td><code class="inline">x = 10 % 4</code></td>
+        <td>x = 2</td>
+      </tr>
+      </tbody>
+    </table>
+    <h4>比較演算子</h4>
+    <p>主に条件分岐を行う際に使用します。数学では＝は等しいものをあらわしますが、プログラムでは代入を意味します。それと区別するために比較する際の演算子では==が使用されます。<br>JavaScriptでは似たような演算子で<code class="inline">==</code>と<code class="inline">===</code>があります。この二つは型による区別を行うか行わないかです。</p>
+    <table>
+      <thead>
+        <tr>
+          <th>演算子</th>
+          <th>概要</th>
+          <th>例</th>
+          <th>結果</th>
+        </tr>
+      </thead>
+      <tbody>
+      <tr>
+        <td><code class="inline">==</code></td>
+        <td>左辺と右辺の値が等しい場合はtrue</td>
+        <td><code class="inline">5 == '5'</code></td>
+        <td>true</td>
+      </tr>
+      <tr>
+        <td><code class="inline">!=</code></td>
+        <td>右辺と左辺が等しくない場合はtrue</td>
+        <td><code class="inline">5 != 't'</code></td>
+        <td>true</td>
+      </tr>
+      <tr>
+        <td><code class="inline"><</code></td>
+        <td>左辺が右辺より小さい場合はtrue</td>
+        <td><code class="inline">5 &lt; 5</code></td>
+        <td>false</td>
+      </tr>
+      <tr>
+        <td><code class="inline"><=</code></td>
+        <td>左辺が右辺以下の場合はtrue</td>
+        <td><code class="inline">5 &lt;= 5</code></td>
+        <td>true</td>
+      </tr>
+      <tr>
+        <td><code class="inline">></code></td>
+        <td>左辺が右辺より大きい場合はtrue</td>
+        <td><code class="inline">5 &gt; 3</code></td>
+        <td>true</td>
+      </tr>
+      <tr>
+        <td><code class="inline">>=</code></td>
+        <td>左辺が右辺以上の場合はtrue</td>
+        <td><code class="inline">5 &gt;= 5</code></td>
+        <td>true</td>
+      </tr>
+      <tr>
+        <td><code class="inline">===</code></td>
+        <td>左辺と右辺の値が等しくデータ型も同じ場合はtrue</td>
+        <td><code class="inline">5 === '5'</code></td>
+        <td>false</td>
+      </tr>
+      <tr>
+        <td><code class="inline">!==</code></td>
+        <td>左辺と右辺の値が等しくない場合、またはデータが異なる場合はtrue</td>
+        <td><code class="inline">5 !== '5'</code></td>
+        <td>true</td>
+      </tr>
+    </tbody>
+  </table>
+    <h2 id="2">2. 関数</h2>
+    <p>JavaScriptでは、関数を使ってコードを再利用可能なブロックにまとめることができます。</p>
+
+    <h3>関数の宣言</h3>
+    <p>記法：<code class="inline">function 関数名(引数, ...){処理}</code></p>
+    <pre><code>function greet(name) {
+    return "Hello, " + name;
+}
+
+console.log(greet("Alice"));  // "Hello, Alice"
+</code></pre>
+    <p>この例では関数名は<code class="inline">greet</code>、引数は<code class="inline">name</code>の一つ。引数は複数設定することもでき、関数の呼び出し時に入力し、値を関数に渡します。関数内に<code class="inline">return</code>文を記述することで値を返すことができます。</p>
+    <h3>関数リテラル</h3>
+    <p>記法：<code class="inline">function(引数, ...){処理}</code></p>
+    <pre><code>const greet = function(name) {
+    return "Hello, " + name
+}
+
+console.log(greet("Bob"));  // "Hello, Bob"
+</code></pre>
+    <p>JavaScriptでは関数はデータ型のひとつであるため、変数に代入したり、関数の引数として渡したりできます。関数リテラルは宣言時に関数名を持っていません。例では<code class="inline">function(name){}</code>と関数を定義してgreetという変数に格納しています。呼び出すときは格納した変数名を用いて呼び出すことができます。</p>
+    <h3>アロー関数</h3>
+    <p>記法：<code class="inline">(引数, ...) => {処理}</code></p>
+    <pre><code>const greet = (name) => "Hello, " + name;
+
+console.log(greet("Bob"));  // "Hello, Bob"
+</code></pre>
+    <p>アロー関数は<code class="inline">=></code>を用いて関数リテラルを記述しています。今回の例は関数リテラルの例と同じ処理をしています。アロー関数では処理が一文のときはブロックを表す<code class="inline">{ }</code>や<code class="inline">return</code>命令を省略できます。このとき、文の返り値がそのまま関数の返り値となります。</p>
+    
+    <h2 id="3">3. 制御構文</h2>
+    <h3>条件分岐</h3>
+    <p>記法：<code class="inline">if (条件式1) {処理1} else if (条件式2) {処理2} else {処理3}</code></p>
+    <pre><code>let score = 85;
+
+if (score >= 90) {
+    console.log("A");
+} else if (score >= 80) {
+    console.log("B");
+} else {
+    console.log("C");
+}  // "B"
+</code></pre>
+    <p><code class="inline">if</code>、<code class="inline">else</code>を使って条件分岐をします。条件式は比較演算子を用いた式や関数などを書きます。条件式が<code class="inline">true</code>となるときにその直後にある処理を行います。条件式が<code class="inline">false</code>となった場合は次の<code class="inline">else if</code>の条件式に進みます。すべての条件式で<code class="inline">false</code>となると<code class="inline">else</code>に進み、処理を行います。<br><code class="inline">else</code>や<code class="inline">else if</code>必要ない場合は設定しないこともできますし、<code class="inline">else if</code>は複数回使うこともできます。</p>
+    <h3>ループ</h3>
+    <h4>for文</h4>
+    <p>記法：<code class="inline">for (初期化;条件式;更新){繰り返し処理}</code></p>
+    <pre><code>for (let i = 0; i < 5; i++) {
+    console.log(i);
+}
+</code></pre>
+    <p><code class="inline">let i=0;</code>で変数<code class="inline">i</code>を0に初期化しています。ここで宣言するときは基本的に<code class="inline">let</code>を使用し、宣言した変数はfor文の中でのみ有効にします。初期化のあとに条件式<code class="inline">i < 5</code>を満たす場合に処理が行われます。処理の後は値の更新が行われます。<code class="inline">i++</code>は<code class="inline">i</code>に1を足すことを表しています。更新した後はもう一度条件式にもどり、これを繰り返します。条件式を満たさない場合は繰り返し処理が終了します。</p>
+    <h4>while文</h4>
+    <p>記法：<code class="inline">while(条件式){処理}</code></p>
+    <pre><code>let j = 0;
+while (j < 5) {
+    console.log(j);
+    j++;
+}
+</code></pre>
+    <p>while文は条件式を満たす場合に処理を行い処理が終わるともう一度条件式に戻ってきます。処理内で変数<code class="inline">j</code>の値を更新しています。</p>
+    <h2 id="4">4. オブジェクトと配列</h2>
+    <h3>オブジェクト</h3>
+    <p>記法：<code class="inline">変数名={key:value,...};</code></p>
+    <pre><code>let person = {
+    name: "Alice",
+    age: 25,
+    greet: function() {
+        console.log("Hello, " + this.name);
+    }
+};
+
+console.log(person.name);  // "Alice"
+person.greet();  // "Hello, Alice"
+</code></pre>
+    <p>オブジェクトはJavaScriptでは型のひとつとして扱われます。オブジェクトはプロパティを持っており、プロパティは<code class="inline">key</code>とそれに対応する<code class="inline">value</code>で構成されます。<code class="inline">value</code>は型の指定がなく文字列や数値、関数リテラルなどを使うことができます。プロパティの値を呼び出す場合は<code class="inline">person.name</code>のように<code class="inline">.</code>をつけて使います。</p>
+    <h3>配列</h3>
+    <p>記法：<code class="inline">変数名 = [value,...];</code></p>
+    <pre><code>let numbers = [1, 2, 3, 4, 5];
+console.log(numbers[0]);  // 1
+
+numbers.push(6);  // 配列の末尾に6を追加
+console.log(numbers);  // [1, 2, 3, 4, 5, 6]
+</code></pre>
+    <p>配列は複数の値を複数格納でき、要素にアクセスする際は要素を数字で指定します。このとき、一つ目の値の番号は0となります。値の型に指定はなく一つの配列に別の型の値を格納することもできます。配列は値を追加したり値を削除したりできます。</p>
+<!-- 
+    <h2>5. DOM操作</h2>
+    <h3>要素の取得</h3>
+    <pre><code>let element = document.getElementById("myElement");
+let anotherElement = document.querySelector(".myClass");
+</code></pre>
+
+    <h3>イベントリスナー</h3>
+    <pre><code>let button = document.getElementById("myButton");
+
+button.addEventListener("click", function() {
+    alert("Button clicked!");
+});
+</code></pre> -->
+    <!-- <h2>まとめ</h2> -->
+    <!-- <p>JavaScriptは非常に強力な言語であり、ウェブ開発の世界では不可欠です。この記事では、基本的な構文からオブジェクト、配列、DOM操作まで、JavaScriptの基礎をカバーしました。これらの基本を理解し、実際にコードを書いてみることで、さらに深く学んでいくことができるでしょう。</p> -->
+    <div class="a">
+      <img src="../pictures/icon_kunikyu_himejijo.jpg" alt="" class="icon">
+      <p id="name">kunikyu</p>
+      <p id="lustupdate">製作時間：7時間<br>最終更新：2024-08-13</p>
+    </div>
   </body>
 </html>
