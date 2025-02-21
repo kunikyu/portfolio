@@ -1,0 +1,61 @@
+<!DOCTYPE html>
+<html lang="jp">
+<head>
+    <meta charset="UTF-8">
+    <link rel="stylesheet" href="works.css">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>mahjong-stats</title>
+</head>
+<body>
+    <main>
+        <h1>麻雀統計管理アプリ</h1>
+        <div id="about">
+            <h2>このアプリについて</h2>
+            <a href="https://mahjong-stats-wine.vercel.app/">公開中のアプリ</a>
+            <a href="https://github.com/kunikyu/mahjong-stats">github</a>
+            <p>
+                麻雀の統計を管理するアプリです。現在開発途中であり、一部機能のみの実装です。<br>
+                私自身が麻雀をたしなむのですが、その際に簡単な統計を取りたいと思い、作成しています。<br>
+                現在は、プレイヤーの登録、ルールの登録、局ごとの成績の記録ができます。<br>
+                試合結果を記録するAPIが未実装なので最終的な記録が残らないです。<br>
+                また、このアプリの開発環境、使用ライブラリは以下の通りです。<br>
+                
+            </p>
+            <ul>
+                <li>React 18</li>
+                <li>Next.js 14</li>
+                <li>Tailwind CSS</li>
+                <li>Tailwind Merge</li>
+                <li>Prisma</li>
+                <li>TypeScript</li>
+            </ul>
+            また、サーバにはVercel、データベース、バックエンドにはsupabaseを使用しています。<br>
+            <h3>アプリの画面</h3>
+            <img src="../pictures/mahjong_rule.png" alt=""><br>
+            これはルールの登録画面です。ここでは麻雀のルールを登録します。<br>
+            <img src="../pictures/mahjong_newGame.png" alt=""><br>
+            試合の登録を開始すると、この画面が表示されます。ここでは事前に登録しておいたプレイヤー、ルールを選択します。<br>
+            <img src="../pictures/mahjong_demo.png" alt=""><br>
+            <img src="../pictures/mahjong_demo2.png" alt=""><br>
+            これらは、局ごとの結果を記録する画面です。<br>
+            スコア変動は自動で記録されます。
+            02/21現在では本場による点数の変化が記録されません。<br>
+        </div>
+        <div >
+            <h2>今後の実装予定</h2>
+            <ul>
+                <li class="red">試合結果の記録</li>
+                <li>プレイヤー削除などの管理機能</li>
+                <li>局ごとの結果の修正</li>
+                <li class="red">統計の表示</li>
+                <li>ルールの修正</li>
+                <li class="red">登録された試合データの表示</li>
+            </ul>
+            <p>ほとんどの機能が未実装ですが、太字のものは2月中の実装を目指しています。</p>
+        </div>
+    </main>
+    <footer>
+        <p id="copyright">© kunikyu.</p>
+    </footer>
+</body>
+</html>

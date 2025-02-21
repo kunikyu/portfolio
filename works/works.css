@@ -44,3 +44,17 @@ b{
         display: none;
     }
 }
+table{
+    border-collapse: collapse;
+}
+th, td{
+    border: 1px solid #000;
+    padding: 0.5em;
+}
+img {
+    border: #000 1px solid;
+    margin: 0.5em 0;
+}
+.red{
+    font-weight: bold;
+}
