@@ -1,0 +1,68 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <title>Yumenonaka | kunikyu's portfolio</title>
+    <link href="works.css" rel="stylesheet">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  </head>
+  <body>
+    <header></header>
+    <main>
+      <h1>Todoアプリ</h1>
+        <div id="about">
+            <h2>このアプリについて</h2>
+            <p>
+                Todoリストを作成、管理するアプリです。<br>
+            <a href="https://kunikyu.github.io/react-todo-app/">公開中のアプリ</a><br>
+            </p>
+            <h3>アプリのUI</h3>
+            <img class="b" src="../pictures/todo-demo.png" alt=""><br>
+            <h3>アプリの機能</h3>
+            以下に示されるようなTodoアプリとしての基本的な機能を実装しています。<br>
+            <ul>
+                <li>Todoの追加</li>
+                <li>Todoの削除</li>
+                <li>Todoの完了状態の変更</li>
+                <li>Todoの編集</li>
+                <li>Todoの保存と読み込み</li>
+            </ul>
+            <p>
+                Todoの保存と読み込みは、ブラウザのローカルストレージを使用して実装しています。<br>
+                これにより、ページを再読み込みしてもTodoの状態が保持されます。<br>
+            </p>
+            <p>
+                基本的な機能のほかに「嘘」機能を実装しています。<br>
+                Todoを追加する際に、「嘘」にチェックすると嘘のTodoとして追加されます。<br>
+            </p>
+            <img class="b" src="../pictures/todo_add_fake.png" alt=""><br>
+            <p>
+                嘘のTodoは、通常のTodoとほとんど変わらないように表示されます。<br>
+                通常のTodoと優先度の星の色が異なるので見分けることが可能です。<br>
+            </p>
+            <img src="../pictures/todo_fake.png" alt=""><br>
+            <p>
+                嘘のTodoは、通常のTodoと違い、完了状態の変更や削除の操作ができません。<br>
+                そのため、嘘のTodoを追加する際は慎重に行う必要があります。<br>
+                また、嘘のTodoに操作を行おうとすると、煽られます。
+            </p>
+            <img class="b" src="../pictures/todo_fake_pop.png" alt=""><br>
+            <p>
+                嘘のTodoに期限を設定すると、期限が過ぎた時に自動的に消えます。<br>
+            </p>
+            <h3>使用技術</h3>
+            <ul>
+                <li>React</li>
+                <li>TypeScript</li>
+                <li>Tailwind CSS</li>
+            </ul>
+        </div>
+      <div id="sub_footer">
+          <p id="tomain"><a href="../index.html">ポートフォリオメインページ</a></p>
+          <p id="lastupdate">最終更新 <br class="null">2025/6/9</p>
+      </div>
+    </main>
+    <footer>
+      <p id="copyright">© kunikyu.</p>
+    </footer>
+  </body>
+</html>
